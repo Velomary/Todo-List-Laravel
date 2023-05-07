@@ -1,0 +1,148 @@
+@import url(./mode.css);
+:root{
+    --first:white;
+    --second:blueviolet;
+    --third:black;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: outfit;
+    
+}
+.body{
+    background-color: var(--first);
+    transition: 1s;
+}
+.titre h1{
+    text-align: center;
+    font-size: 60px;
+    margin: 50px;
+    font-weight: 650;
+    color: var(--third);
+    cursor: pointer;
+    
+}
+.titre h1 span{
+    color: var(--second);
+}
+
+.input_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.input_div .input{
+    padding: 18px;
+    height: 15px;
+    width: 300px;
+    outline: none;
+    border: 3px solid var(--second);
+    border-radius: 25px;
+    font-size: large;
+    background-color: transparent; 
+    color: var(--third);  
+}
+.input_div .add_button{
+    margin: 15px;
+    padding: 10px 15px;
+    background-color: var(--second);
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    border-radius: 10px;
+    transition: all 1s;
+    border: none;
+}
+.input_div .add_button:hover{
+    opacity: 0.8;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+.item{
+    padding: 0.5rem;
+    margin-bottom: 1.5rem; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.item li{
+    list-style-type: none;
+    display: flex;
+}
+.item .point{
+    color: var(--second);
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 1s;
+}
+.item_input{
+    background: none;
+    outline: none;
+    border: none;
+    width: 250px;
+    padding-left: 4px;
+    padding-bottom: 3px;
+    font-size: 24px;
+    border-bottom: none;
+    transition: all 0.09s;
+    color: var(--third);
+}
+.active{
+    background: none;
+    outline: none;
+    border: none;
+    width: 250px;
+    padding-left: 4px;
+    padding-bottom: 3px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--second); 
+    
+}
+
+.item .Edit_button{
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: var(--second);
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+    /* float: left; */
+}
+.item .Edit_button:hover{
+    opacity: 0.8;
+}
+.item .remove_button{
+    margin: 5px;
+    padding: 7px 12px;
+    text-decoration: none;
+    font-size: large;
+    border: 4px solid var(--second);
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--third);
+    float: left;
+}
+
+
+.dark_theme{
+    --first:rgb(26, 26, 26);
+    --second:hsl(271, 50%, 53%);
+    --third:white;
+    transition: 1s;
+
+}
+
+

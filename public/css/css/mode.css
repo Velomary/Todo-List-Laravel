@@ -1,0 +1,14 @@
+.mode{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    background-color: blueviolet;
+    font-size: 18px;
+    color: var(--first);
+    padding: 13px 15px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
