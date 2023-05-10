@@ -34,6 +34,5 @@ class todocontroller extends Controller
 
         return redirect()->route('home');
 
-
     }
 }

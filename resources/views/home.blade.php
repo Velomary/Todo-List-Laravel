@@ -28,28 +28,30 @@
                             {{-- <a href="#" class="add_button" >add</a> --}}
                             
                             <input type="text" name="nom_du_champ" class="input"placeholder="Write what you want here..." required>
-                            <button class="add_button" type="submit">Envoyer</button>
+                            <button class="add_button" type="submit">Add</button>
                         </form>
                     </div>
                     <div class="content">
                         <div class="item">
-
                             @foreach($listTodo as $valeur)
-                            <form action="{{ route('update-todo', ['id' => $valeur->id]) }}" method="post">
-                                @csrf
-                                @method('PUT')
-                                <li>  
-                                    <input type="text" value="{{ $valeur->name }}" name="item" class="item_input"> 
-                                    <button type="submit" class="Edit_button">Edit</button>
-                                </li>
-                            </form>
-                            
-                            <form action="{{ route('delete-todo', ['id' => $valeur->id]) }}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="remove_button">Supprimer</button>
-                            </form>
-        
+                                <div class="task">
+
+                                    <form action="{{ route('update-todo', ['id' => $valeur->id]) }}" method="post">
+                                        @csrf
+                                        @method('PUT')
+                                        <li class="list-item"> 
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                                            <input type="text" value="{{ $valeur->name }}" name="item" class="item_input"> 
+                                            <button type="submit" class="Edit_button">Save</button>
+                                        </li>
+                                    </form>
+                                    
+                                    <form action="{{ route('delete-todo', ['id' => $valeur->id]) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="remove_button">Delete</button>
+                                    </form>
+                                </div>
         
                             @endforeach
                         </div>

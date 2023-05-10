@@ -24,8 +24,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
 
 Route::post('/insert-todo', [App\Http\Controllers\todocontroller::class, 'index'])
 ->name('insert-todo');
-// Route::post('/delete', [App\Http\Controllers\todocontroller::class, 'index'])
-// ->name('delete');
 
 Route::delete('/delete-todo/{id}', [App\Http\Controllers\todocontroller::class,'delete'])
 ->name('delete-todo');

@@ -16,7 +16,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Style -->
-
+    
     <link rel="stylesheet" href="{{asset('css/css/main.css')}}">
     <link rel="stylesheet" href="{{asset('css/css/mode.css')}}">
     <link rel="stylesheet" href="{{asset('css/css/fontA/all.min.css')}}">
@@ -24,7 +24,7 @@
     <!-- Script -->
     <script src="{{'public/js/index.js'}}"></script>
     <script src="{{'public/js/darkmode.js'}}"></script>
-    <script src="{{'public/css/css/fonA/all.min.js'}}"></script>
+    <script src="{{'css/css/fonA/all.min.js'}}"></script>
 
 
 
