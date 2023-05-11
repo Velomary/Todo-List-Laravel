@@ -1231,8 +1231,12 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 
 
 const icon = document.getElementById('icon')
-
+const drop = document.getElementById('navbarDropdown')
+const dropdown_menu = document.querySelector('.dropdown-menu')
 icon.addEventListener('click',function(){
     document.body.classList.toggle('dark_theme')
+})
+drop.addEventListener('click',()=>{
+  dropdown_menu.classList.toggle('actif')
 })
 

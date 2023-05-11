@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $listTodo = DB::table('tache')->get();
         return view('home', compact('listTodo'));
-        // return view('home');
+        
     }
     
 }

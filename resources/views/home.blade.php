@@ -27,7 +27,7 @@
                             @csrf
                             {{-- <a href="#" class="add_button" >add</a> --}}
                             
-                            <input type="text" name="nom_du_champ" class="input"placeholder="Write what you want here..." required>
+                            <input type="text" name="input" class="input"placeholder="Write what you want here..." required>
                             <button class="add_button" type="submit">Add</button>
                         </form>
                     </div>
@@ -40,7 +40,7 @@
                                         @csrf
                                         @method('PUT')
                                         <li class="list-item"> 
-                                            <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                                            <input class="form-check-input" type="checkbox" id="check" >
                                             <input type="text" value="{{ $valeur->name }}" name="item" class="item_input"> 
                                             <button type="submit" class="Edit_button">Save</button>
                                         </li>
