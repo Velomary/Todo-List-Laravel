@@ -40,8 +40,10 @@
                                         @csrf
                                         @method('PUT')
                                         <li class="list-item"> 
-                                            <input class="form-check-input" type="checkbox" id="check" >
-                                            <input type="text" value="{{ $valeur->name }}" name="item" class="item_input"> 
+                                            <input class="form-check-input" type="checkbox" name="statu" id="check" {{$valeur->statu ? 'checked':''}} value=1>
+
+                                            <input type="text" value="{{ $valeur->name }}" name="item" class="item_input">
+
                                             <button type="submit" class="Edit_button">Save</button>
                                         </li>
                                     </form>

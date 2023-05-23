@@ -26,7 +26,7 @@
     <script src="{{'public/js/darkmode.js'}}"></script>
     <script src="{{'css/css/fonA/all.min.js'}}"></script>
 
-
+    
 
     <!-- Styles -->
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}

@@ -16,7 +16,6 @@ class todocontroller extends Controller
             'statu' => 0
         ]);
         $listTodo = DB::table('tache')->get();
-        return view('home', compact('listTodo'));
 
         // return view('home');
     }
