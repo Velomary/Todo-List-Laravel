@@ -32,7 +32,7 @@
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     
 </head>
-<body>
+<body class="body">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -90,6 +90,9 @@
 
         <main class="py-4">
             @yield('content')
+            <div class="mode" id="icon">
+                <i class="fas fa-adjust" ></i>
+            </div>
         </main>
     </div>
 </body>

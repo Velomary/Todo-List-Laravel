@@ -18,7 +18,7 @@
                     </div> -->
 
                     <div class="titre">
-                        <h1>Welcome to<span> {{ Auth::user()->name }}</span>'s To do List </h1>
+                        <h1>Welcome <span> {{ Auth::user()->name }}</span>!</h1>
                     </div>
                     <div class="input_div" >
                         {{-- <input type="text" class="input" placeholder="Write what you want here..." required> --}}
@@ -43,7 +43,7 @@
                                              
                                             <input class="form-check-input" type="checkbox" name="statu" id="check" {{$valeur->statu ? 'checked':''}} value=1>
 
-                                            <input type="text" value="{{ $valeur->name }}" name="item" class="item_input">
+                                            <input type="text" value="{{ $valeur->name }}" name="item" class="item_input" style={{$valeur->statu ? "text-decoration:line-through":''}}>
 
                                             <button type="submit" class="Edit_button">Save</button>
                                         </li>
@@ -68,10 +68,7 @@
                     </div> 
         -->      
                     </div>
-                    <div class="mode" id="icon">
-                        <i class="fas fa-adjust" ></i>
-                    </div>
-                
+                                    
             </div>
         </div>
     </div>
