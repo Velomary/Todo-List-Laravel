@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+// use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
+// Récupérer l'ID de l'utilisateur actuellement authentifié
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,7 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $listTodo = DB::table('tache')->get();
+        $user_id = Auth::id();
+        // $user_id = Auth::user()->id;
+        $listTodo = DB::table('tache')->where('creator_id',$user_id)->get();
         return view('home', compact('listTodo'));
         
     }

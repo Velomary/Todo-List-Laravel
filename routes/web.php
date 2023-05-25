@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
 Auth::routes();
 
@@ -31,7 +29,9 @@ Route::delete('/delete-todo/{id}', [App\Http\Controllers\todocontroller::class,'
 Route::put('/update-todo/{id}', [App\Http\Controllers\todocontroller::class,'update'])
 ->name('update-todo');
 
-Route::put('/makedone-todo/{id}', [App\Http\Controllers\todocontroller::class,'makedone'])
-->name('makedone-todo');
-Route::put('/makeundone-todo/{id}', [App\Http\Controllers\todocontroller::class,'makeundone'])
-->name('makeundone-todo');
+
+
+// Route::put('/makedone-todo/{id}', [App\Http\Controllers\todocontroller::class,'makedone'])
+// ->name('makedone-todo');
+// Route::put('/makeundone-todo/{id}', [App\Http\Controllers\todocontroller::class,'makeundone'])
+// ->name('makeundone-todo');

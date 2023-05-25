@@ -18,7 +18,7 @@
                     </div> -->
 
                     <div class="titre">
-                        <h1>To do <span> List</span></h1>
+                        <h1>Welcome to<span> {{ Auth::user()->name }}</span>'s To do List </h1>
                     </div>
                     <div class="input_div" >
                         {{-- <input type="text" class="input" placeholder="Write what you want here..." required> --}}
@@ -29,17 +29,18 @@
                             
                             <input type="text" name="input" class="input"placeholder="Write what you want here..." required>
                             <button class="add_button" type="submit">Add</button>
+                            <input type="text" style="display: none" value="{{ Auth::user()->id }}" name="user_id">
                         </form>
                     </div>
                     <div class="content">
                         <div class="item">
                             @foreach($listTodo as $valeur)
                                 <div class="task">
-
                                     <form action="{{ route('update-todo', ['id' => $valeur->id]) }}" method="post">
                                         @csrf
                                         @method('PUT')
-                                        <li class="list-item"> 
+                                        <li class="list-item">
+                                             
                                             <input class="form-check-input" type="checkbox" name="statu" id="check" {{$valeur->statu ? 'checked':''}} value=1>
 
                                             <input type="text" value="{{ $valeur->name }}" name="item" class="item_input">
