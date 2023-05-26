@@ -14,14 +14,17 @@
     font-family: outfit;
     
 }
-.body{
+.all{
     background-color: var(--first);
-    transition: 1s;
+    height: 100vh;
+    padding-top: 20px;
 }
 .titre h1{
+    
     text-align: center;
     font-size: 60px;
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     font-weight: 650;
     color: var(--third);
     cursor: pointer;
@@ -194,6 +197,5 @@
     box-shadow: none;
     cursor: pointer;
     margin-right: 8px;
-    /* align-items: center; */
     margin-bottom: 12px;
 }

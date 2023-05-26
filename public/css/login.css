@@ -1,16 +1,16 @@
 .container{
     margin: 0;
     padding: 0;
-    /* background-color: rgb(243, 243, 243); */
-    /* height: 100vh; */
+    background-color: var(--first);
+    /* height: 100%; */
 }
 .card{
     background-color: var(--first);
+    margin-top: 80px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 430px;
-    /* border: 3.5px solid var(--second); */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     justify-content: center;

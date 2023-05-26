@@ -5,10 +5,34 @@
     background-color: blueviolet;
     font-size: 18px;
     color: var(--first);
-    padding: 13px 15px;
+    padding: 13px 13px;
     border-radius: 50%;
     text-align: center;
     justify-content: center;
     cursor: pointer;
+    
+    
+    
+}
+.mode button {
+    border: 0;
+    background-color: blueviolet;
+    font-size: 17px;
+    color: var(--third);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.mode:hover button,.mode:hover{
+    background-color: rgb(112, 26, 194);
+    transition: all 0.4s;
+}
+.mode button svg{
+    width: 5rem;
+    height: auto;
+    fill: white;
 }
 
