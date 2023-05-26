@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-// use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Auth;
 // Récupérer l'ID de l'utilisateur actuellement authentifié
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -28,10 +27,22 @@ class HomeController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        // $user_id = Auth::user()->id;
-        $listTodo = DB::table('tache')->where('creator_id',$user_id)->get();
+        $listTodo = DB::table('tache')->where('creator_id',$user_id)->orderby('id','desc')->get();
         return view('home', compact('listTodo'));
         
     }
+    public function dark(){
+        $user_id = Auth::id();
+        $update = DB::table('users')->where('id',$user_id)->update(['theme'=>1]);
+
+        return redirect()->route('home');
+        }
+
+    public function light(){
+        $user_id = Auth::id();
+        $update = DB::table('users')->where('id',$user_id)->update(['theme'=>0]);
+
+        return redirect()->route('home');
+        }
     
 }

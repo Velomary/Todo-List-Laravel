@@ -29,6 +29,10 @@ Route::delete('/delete-todo/{id}', [App\Http\Controllers\todocontroller::class,'
 Route::put('/update-todo/{id}', [App\Http\Controllers\todocontroller::class,'update'])
 ->name('update-todo');
 
+Route::put('/dark-mode', [App\Http\Controllers\Homecontroller::class,'dark'])
+->name('dark-mode');
+Route::put('/light-mode', [App\Http\Controllers\Homecontroller::class,'light'])
+->name('light-mode');
 
 
 // Route::put('/makedone-todo/{id}', [App\Http\Controllers\todocontroller::class,'makedone'])
