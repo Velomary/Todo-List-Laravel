@@ -31,13 +31,14 @@ class HomeController extends Controller
         return view('home', compact('listTodo'));
         
     }
+    //change to dark mode
     public function dark(){
         $user_id = Auth::id();
         $update = DB::table('users')->where('id',$user_id)->update(['theme'=>1]);
 
         return redirect()->route('home');
         }
-
+    //change to light mode
     public function light(){
         $user_id = Auth::id();
         $update = DB::table('users')->where('id',$user_id)->update(['theme'=>0]);

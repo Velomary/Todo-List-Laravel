@@ -19,22 +19,29 @@
                         </div> -->
     
                         <div class="titre">
-                            <h1>Welcome <span> {{ Auth::user()->name }}</span>!</h1>
+                            <h1>Welcome <span> {{ Auth::user()->name }}</span> !</h1>
                         </div>
                         <div class="input_div" >
-                            {{-- <input type="text" class="input" placeholder="Write what you want here..." required> --}}
-                            
+                                                       
                             <form method="POST" action="{{ route('insert-todo') }}">
-                                @csrf
-                                {{-- <a href="#" class="add_button" >add</a> --}}
-                                
+                                @csrf                                
                                 <input type="text" name="input" class="input"placeholder="Write what you want here..." required>
                                 <button class="add_button" type="submit">Add</button>
                             </form>
+                            <div class="clear_div">
+                                @foreach($listTodo as $tache)
+                                    <form action="{{route('delete-All', ['creator_id' => $tache->creator_id])}}" method="POST" >
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="clear"> Clear All</button>
+                                    </form>
+                                @endforeach
+                            </div>
                         </div>
                         <div class="content">
                             <div class="item">
                                 @foreach($listTodo as $valeur)
+                                
                                     <div class="task">
                                         <form action="{{ route('update-todo', ['id' => $valeur->id]) }}" method="post">
                                             @csrf

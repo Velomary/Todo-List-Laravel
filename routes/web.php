@@ -26,6 +26,9 @@ Route::post('/insert-todo', [App\Http\Controllers\todocontroller::class, 'index'
 Route::delete('/delete-todo/{id}', [App\Http\Controllers\todocontroller::class,'delete'])
 ->name('delete-todo');
 
+Route::delete('/delete-All/{creator_id}', [App\Http\Controllers\todocontroller::class,'deleteALl'])
+->name('delete-All');
+
 Route::put('/update-todo/{id}', [App\Http\Controllers\todocontroller::class,'update'])
 ->name('update-todo');
 
