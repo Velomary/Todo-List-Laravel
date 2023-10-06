@@ -27,7 +27,7 @@ class todocontroller extends Controller
             'statu' => 0,
             'creator_id' => $user_id,
         ]);
-        $listTodo = DB::table('tache')->where('creator_id',$user_id)->orderby('id','desc')->get();
+        $listTodo = DB::table('tache')->where('creator_id',$user_id)->orderby('id','asc')->get();
 
         return view('home', compact('listTodo'));
         

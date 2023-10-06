@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 30px;
     right: 25px;
-    background-color: blueviolet;
+    background-color: var(--second);
     font-size: 18px;
     color: var(--first);
     padding: 13px 13px;
@@ -16,7 +16,7 @@
 }
 .mode button {
     border: 0;
-    background-color: blueviolet;
+    background-color: var(--second);
     font-size: 17px;
     color: var(--third);
     display: flex;

@@ -27,7 +27,7 @@ class HomeController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        $listTodo = DB::table('tache')->where('creator_id',$user_id)->orderby('id','desc')->get();
+        $listTodo = DB::table('tache')->where('creator_id',$user_id)->orderby('id','asc')->get();
         return view('home', compact('listTodo'));
         
     }
